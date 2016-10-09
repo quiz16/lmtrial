@@ -1,0 +1,36 @@
+{
+  "name": "lmtrial",
+  "version": "0.0.0",
+  "description": "angular trial app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "webpack-dev-server --hot"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "author": "Reynald Jo Armonia",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "angular": "~1.5.8",
+    "moment": "~2.15.1",
+    "webpack": "~1.13.2",
+    "webpack-dev-server": "~1.16.1"
+  },
+  "devDependencies": {
+    "gulp-change": "~1.0.0",
+    "chai": "~3.5.0",
+    "glob": "~7.1.0",
+    "express": "~4.14.0",
+    "gulp-clean": "~0.3.2",
+    "gulp-concat": "~2.6.0",
+    "gulp-concat-css": "~2.3.0",
+    "gulp-angular-templatecache": "~2.0.0",
+    "gulp-cache-bust": "~1.0.2",
+    "gulp": "~3.9.1",
+    "bower": "~1.7.9",
+    "babel-core": "~6.17.0",
+    "babel-eslint": "~7.0.0"
+  }
+}

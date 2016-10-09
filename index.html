@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html data-ng-app="app">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+	<title data-ng-bind="title"></title>
+	<style>
+		/* This helps the ng-show/ng-hide animations start at the right place. */
+		/* Since Angular has this but needs to load, this gives us the class early. */
+		.ng-hide {
+			display: none!important;
+		}
+	</style>
+
+	<!-- inject:css -->
+	<link href="/less/style.less" rel="stylesheet/less" type="text/css" />
+	<link href="/bower_components/bootstrap/less/bootstrap.less" rel="stylesheet/less" type="text/css" />
+	<!-- endinject -->
+</head>
+<body>
+	<div data-ng-include="'/app/layout/layout.html'"></div>
+
+	<!-- inject-vendor:js -->
+	<script src="/bower_components/jquery/dist/jquery.js"></script>
+	<script src="/bower_components/angular/angular.js"></script>
+	<script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+	<script src="/bower_components/angular-resource/angular-resource.min.js"></script>
+	<script src="/bower_components/moment/moment.js"></script>
+	<script src="/bower_components/less/dist/less.min.js"></script>
+	<script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="/bower_components/lodash/dist/lodash.min.js"></script>
+	<script src="/bower_components/ngstorage/ngStorage.min.js"></script>
+	<!-- endinject -->
+
+	<!-- inject:js -->
+	<!-- Bootstrapping -->
+	<script src="/app/app.module.js"></script>
+	<script src="/app/templates.module.js"></script>
+
+	<!-- Reusable Blocks/Modules -->
+	<script src="/app/blocks/blocks.module.js"></script>
+	<script src="/app/blocks/config.js"></script>
+	<script src="/app/blocks/session.service.js"></script>
+
+	<!-- Core -->
+	<script src="/app/core/core.module.js"></script>
+	<script src="/app/core/core.api.service.js"></script>
+	<script src="/app/core/core.constants.js"></script>
+
+	<!-- Layout -->
+	<script src="/app/layout/layout.module.js"></script>
+	<script src="/app/layout/layout.ctrl.js"></script>
+
+	<!-- Contacts -->
+	<script src="/app/contacts/contacts.module.js"></script>
+	<script src="/app/contacts/contacts.ctrl.js"></script>
+
+	<!-- endinject -->
+
+</body>
+</html>

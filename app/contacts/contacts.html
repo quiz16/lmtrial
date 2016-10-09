@@ -1,0 +1,343 @@
+<div ui-view></div>
+<div class="contact-wrapper" data-ng-if="!vm.isLoading">
+	<div class="contact-header">
+		<span class="contact-title">My Contacts</span>
+		<span class="contact-detail">{{ vm.collection.TotalNumber }} Total Contacts | Last Updated <i><strong>Yesterday June 4 2016</strong></i></span>
+		<div class="pull-right contact-header-btn">
+			<button class="contact-add-btn">
+				<span class="crm-add_sm"></span> Add Contacts
+			</button>
+			<button tooltip-placement="bottom" uib-tooltip="Select to or more contacts to merge" class="contact-merge-btn">
+				<span class="crm-merge"></span> Merge Contacts
+			</button>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="contact-table-wrapper">
+		<div class="contact-letter">
+			<div data-ng-repeat="letter in vm.alphabet">{{ letter }}</div>
+		</div>
+		<div class="contact-table-content">
+			<!-- <div data-ng-repeat="letter in vm.alphabet">{{ letter }}</div> -->
+		<table class="table table-fixed">
+			<thead>
+				<tr class="col-xs-12">
+					<th class="col-xs-1">
+						<input type="checkbox" class="checkbox">
+					</th>
+					<th data-ng-repeat="item in vm.tableItems" class="{{ item.class }}">
+						<span> <strong> {{ item.name }} </strong> </span>
+					</th>
+					<th class="col-xs-2">
+						<input type="text" class="form-control" placeholder="Search Contacts">
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr data-ng-repeat="model in vm.collection.FamilyList" class="col-xs-12" data-ng-click="vm.goContact( model.FamilyID )">
+					<td class="col-xs-1">
+						<input type="checkbox" name="">
+					</td>
+					<td class="col-xs-2">
+						<span> {{ model.FamilyFullName }} </span>
+					</td>
+					<td class="col-xs-2">
+						<span> {{ model.City }} </span>
+					</td>
+					<td class="col-xs-2">
+						<span> {{ model.Contact }} </span>
+					</td>
+					<td class="col-xs-2">
+						<span> {{ model.Adviser }} </span>
+					</td>
+					<td class="col-xs-1">
+						<span> {{ model.ClientType }} </span>
+					</td>
+					<td class="col-xs-2">
+						<span> ICONSSS </span>
+					</td>
+				</tr>
+				<tr class="col-xs-12">
+					<td class="col-xs-1">
+						<input type="checkbox" name="">
+					</td>
+					<td class="col-xs-2">
+						<span> Saint Stevenson (Jason) </span>
+					</td>
+					<td class="col-xs-2">
+						<span> Auckland </span>
+					</td>
+					<td class="col-xs-2">
+						<span> 123-645-9087 </span>
+					</td>
+					<td class="col-xs-2">
+						<span> James Punnet </span>
+					</td>
+					<td class="col-xs-1">
+						<span> Newsletter </span>
+					</td>
+					<td class="col-xs-2">
+						<span> ICONSSS </span>
+					</td>
+				</tr>
+				<tr class="col-xs-12">
+					<td class="col-xs-1">
+						<input type="checkbox" name="">
+					</td>
+					<td class="col-xs-2">
+						<span> Saint Stevenson (Jason) </span>
+					</td>
+					<td class="col-xs-2">
+						<span> Auckland </span>
+					</td>
+					<td class="col-xs-2">
+						<span> 123-645-9087 </span>
+					</td>
+					<td class="col-xs-2">
+						<span> James Punnet </span>
+					</td>
+					<td class="col-xs-1">
+						<span> Newsletter </span>
+					</td>
+					<td class="col-xs-2">
+						<span> ICONSSS </span>
+					</td>
+				</tr>
+				<tr class="col-xs-12">
+					<td class="col-xs-1">
+						<input type="checkbox" name="">
+					</td>
+					<td class="col-xs-2">
+						<span> Saint Stevenson (Jason) </span>
+					</td>
+					<td class="col-xs-2">
+						<span> Auckland </span>
+					</td>
+					<td class="col-xs-2">
+						<span> 123-645-9087 </span>
+					</td>
+					<td class="col-xs-2">
+						<span> James Punnet </span>
+					</td>
+					<td class="col-xs-1">
+						<span> Newsletter </span>
+					</td>
+					<td class="col-xs-2">
+						<span> ICONSSS </span>
+					</td>
+				</tr>
+				<tr class="col-xs-12">
+					<td class="col-xs-1">
+						<input type="checkbox" name="">
+					</td>
+					<td class="col-xs-2">
+						<span> Saint Stevenson (Jason) </span>
+					</td>
+					<td class="col-xs-2">
+						<span> Auckland </span>
+					</td>
+					<td class="col-xs-2">
+						<span> 123-645-9087 </span>
+					</td>
+					<td class="col-xs-2">
+						<span> James Punnet </span>
+					</td>
+					<td class="col-xs-1">
+						<span> Newsletter </span>
+					</td>
+					<td class="col-xs-2">
+						<span> ICONSSS </span>
+					</td>
+				</tr>
+				<tr class="col-xs-12">
+					<td class="col-xs-1">
+						<input type="checkbox" name="">
+					</td>
+					<td class="col-xs-2">
+						<span> Saint Stevenson (Jason) </span>
+					</td>
+					<td class="col-xs-2">
+						<span> Auckland </span>
+					</td>
+					<td class="col-xs-2">
+						<span> 123-645-9087 </span>
+					</td>
+					<td class="col-xs-2">
+						<span> James Punnet </span>
+					</td>
+					<td class="col-xs-1">
+						<span> Newsletter </span>
+					</td>
+					<td class="col-xs-2">
+						<span> ICONSSS </span>
+					</td>
+				</tr>
+				<tr class="col-xs-12">
+					<td class="col-xs-1">
+						<input type="checkbox" name="">
+					</td>
+					<td class="col-xs-2">
+						<span> Saint Stevenson (Jason) </span>
+					</td>
+					<td class="col-xs-2">
+						<span> Auckland </span>
+					</td>
+					<td class="col-xs-2">
+						<span> 123-645-9087 </span>
+					</td>
+					<td class="col-xs-2">
+						<span> James Punnet </span>
+					</td>
+					<td class="col-xs-1">
+						<span> Newsletter </span>
+					</td>
+					<td class="col-xs-2">
+						<span> ICONSSS </span>
+					</td>
+				</tr>
+				<tr class="col-xs-12">
+					<td class="col-xs-1">
+						<input type="checkbox" name="">
+					</td>
+					<td class="col-xs-2">
+						<span> Saint Stevenson (Jason) </span>
+					</td>
+					<td class="col-xs-2">
+						<span> Auckland </span>
+					</td>
+					<td class="col-xs-2">
+						<span> 123-645-9087 </span>
+					</td>
+					<td class="col-xs-2">
+						<span> James Punnet </span>
+					</td>
+					<td class="col-xs-1">
+						<span> Newsletter </span>
+					</td>
+					<td class="col-xs-2">
+						<span> ICONSSS </span>
+					</td>
+				</tr>
+				<tr class="col-xs-12">
+					<td class="col-xs-1">
+						<input type="checkbox" name="">
+					</td>
+					<td class="col-xs-2">
+						<span> Saint Stevenson (Jason) </span>
+					</td>
+					<td class="col-xs-2">
+						<span> Auckland </span>
+					</td>
+					<td class="col-xs-2">
+						<span> 123-645-9087 </span>
+					</td>
+					<td class="col-xs-2">
+						<span> James Punnet </span>
+					</td>
+					<td class="col-xs-1">
+						<span> Newsletter </span>
+					</td>
+					<td class="col-xs-2">
+						<span> ICONSSS </span>
+					</td>
+				</tr>
+				<tr class="col-xs-12">
+					<td class="col-xs-1">
+						<input type="checkbox" name="">
+					</td>
+					<td class="col-xs-2">
+						<span> Saint Stevenson (Jason) </span>
+					</td>
+					<td class="col-xs-2">
+						<span> Auckland </span>
+					</td>
+					<td class="col-xs-2">
+						<span> 123-645-9087 </span>
+					</td>
+					<td class="col-xs-2">
+						<span> James Punnet </span>
+					</td>
+					<td class="col-xs-1">
+						<span> Newsletter </span>
+					</td>
+					<td class="col-xs-2">
+						<span> ICONSSS </span>
+					</td>
+				</tr>
+				<tr class="col-xs-12">
+					<td class="col-xs-1">
+						<input type="checkbox" name="">
+					</td>
+					<td class="col-xs-2">
+						<span> Saint Stevenson (Jason) </span>
+					</td>
+					<td class="col-xs-2">
+						<span> Auckland </span>
+					</td>
+					<td class="col-xs-2">
+						<span> 123-645-9087 </span>
+					</td>
+					<td class="col-xs-2">
+						<span> James Punnet </span>
+					</td>
+					<td class="col-xs-1">
+						<span> Newsletter </span>
+					</td>
+					<td class="col-xs-2">
+						<span> ICONSSS </span>
+					</td>
+				</tr>
+				<tr class="col-xs-12">
+					<td class="col-xs-1">
+						<input type="checkbox" name="">
+					</td>
+					<td class="col-xs-2">
+						<span> Saint Stevenson (Jason) </span>
+					</td>
+					<td class="col-xs-2">
+						<span> Auckland </span>
+					</td>
+					<td class="col-xs-2">
+						<span> 123-645-9087 </span>
+					</td>
+					<td class="col-xs-2">
+						<span> James Punnet </span>
+					</td>
+					<td class="col-xs-1">
+						<span> Newsletter </span>
+					</td>
+					<td class="col-xs-2">
+						<span> ICONSSS </span>
+					</td>
+				</tr>
+				<tr class="col-xs-12">
+					<td class="col-xs-1">
+						<input type="checkbox" name="">
+					</td>
+					<td class="col-xs-2">
+						<span> Saint Stevenson (Jason) </span>
+					</td>
+					<td class="col-xs-2">
+						<span> Auckland </span>
+					</td>
+					<td class="col-xs-2">
+						<span> 123-645-9087 </span>
+					</td>
+					<td class="col-xs-2">
+						<span> James Punnet </span>
+					</td>
+					<td class="col-xs-1">
+						<span> Newsletter </span>
+					</td>
+					<td class="col-xs-2">
+						<span> ICONSSS </span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+	</div>
+</div>
+<div class="contact-loading" data-ng-if="vm.isLoading">
+	<h1>Loading...</h1>
+</div>

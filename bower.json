@@ -1,0 +1,36 @@
+{
+  "name": "lmtrial",
+  "description": "angular trial app",
+  "main": "index.js",
+  "authors": [
+    "Reynald Jo Armonia"
+  ],
+  "license": "BSD-2-Clause",
+  "keywords": [
+    "angular"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-bootstrap": "^2.1.4",
+    "angular-moment": "~0.9.2",
+    "bootstrap": "^3.3.7",
+    "lodash": "^4.16.3",
+    "angular-ui-router": "^0.3.1",
+    "ngstorage": "^0.3.11",
+    "angular-resource": "^1.5.8"
+  },
+  "resolutions": {
+    "moment": "~2.10.0"
+  },
+  "devDependencies": {
+    "less": "^2.7.1"
+  }
+}

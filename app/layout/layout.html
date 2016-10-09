@@ -1,0 +1,50 @@
+<div data-ng-controller="Layout as vm">
+	<nav class="navbar navbar-default navbar-fixed-top col-sm-9 col-md-10">
+		<div class="container-fluid">
+			<div class="navbar-header pull-left">
+				<div class="cms-header-form has-feedback">
+					<button class="cms-menu-btn">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<input type="text" class="form-control cms-menu-search" placeholder="Enter search text here...">
+					<i class="form-control-feedback crm-search pointer"></i>
+				</div>
+			</div>
+			<div class="navbar-left-icons">
+				<span class="crm-recently_viewed pointer"></span>
+				<span class="crm-launch pointer"></span>
+			</div>
+			<div class="navbar-right-icons pull-right">
+				<span>Welcome Back,
+					<span class="user-name">{{ vm.userInfo.FirstName }} {{ vm.userInfo.LastName }}</span>
+					<span class="caret pointer"></span>
+				</span>
+				<span>|</span>
+				<span class="crm-settings pointer"></span>
+				<span class="crm-tag pointer"></span>
+				<span class="crm-notification pointer"></span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</nav>
+	<div class="section-wrapper container-fluid">
+		<div class="row">
+			<div class="col-sm-3 col-md-2 sidebar">
+				<ul class="nav nav-sidebar">
+					<li data-ng-repeat="item in vm.items">
+						<a ui-sref="my{{item.state}}" ui-sref-active="active">
+							<span class="{{ item.state }}"></span> {{ item.name }}
+							<span class="glyphicon glyphicon-chevron-right pull-right"></span>
+						</a>
+					</li>
+				</ul>
+
+			</div>
+			<div class="main col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2" ui-view></div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</div>
