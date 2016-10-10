@@ -16,7 +16,11 @@ module.exports = {
 	'devServer' : {
 	'inline' : true,
 	'port' : 8080,
-	
+	'proxy': [ {
+		'path': '/*',
+		    'target': 'https://testapi.nzfsg.co.nz/',
+		    'changeOrigin' : true,
+		} ]
     },
 
 	'plugins' : [
