@@ -9,20 +9,14 @@ module.exports = {
 	},
 	'output': {
 		'path':  __dirname + '/js',
-		'filename' : 'app.bundle.js'
+		'filename' : 'app.bundle.js',
+		'publicPath' : 'testapi.nzfsg.co.nz/'
 	},
 
 	'devServer' : {
 	'inline' : true,
 	'port' : 8080,
-	'proxy': [ {
-		'path': '/api',
-		    'target': 'https://testapi.nzfsg.co.nz/',
-		    'changeOrigin' : true,
-		    'pathRewrite' : {
-			'^/api' : ''
-		    }
-		} ]
+	
     },
 
 	'plugins' : [

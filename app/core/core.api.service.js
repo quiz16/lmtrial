@@ -3,7 +3,7 @@
 
 	function apiService ( $resource ) {
 		function login () {
-			return $resource( '/api/login', {}, {
+			return $resource( '/login', {}, {
 				'save' : {
 					'method' : 'POST',
 					// need to add `transformResponse` because API returns string
@@ -17,11 +17,11 @@
 		}
 
 		function getFamilyList () {
-			return $resource( '/api/contacts/FamilyListGet' );
+			return $resource( '/contacts/FamilyListGet' );
 		}
 
 		function getPersonalInfo () {
-			return $resource( '/api/User/PersonalInfoGet' );
+			return $resource( '/User/PersonalInfoGet' );
 		}
 
 		var service = {
